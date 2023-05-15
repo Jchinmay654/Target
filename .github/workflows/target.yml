@@ -4,10 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
     steps:
       - uses: Jchinmay654/Master/.github/workflows/template.yml@main
         with:
           message: "Custom msg"
+
 
