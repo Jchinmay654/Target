@@ -8,7 +8,7 @@ on:
    
 jobs:    
   Call-workflow:
-   uses: Jchinmay654/Master/.github/workflows/check.yml@main.yml
+   uses: Jchinmay654/Master/.github/workflows/check.yml@main 
    with:
      username: Jchinmay654
    secrets: 
