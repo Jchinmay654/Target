@@ -11,6 +11,7 @@ jobs:
    uses: Jchinmay654/Master/.github/workflows/check.yml@main 
    with:
      username: Jchinmay654
-   secrets: 
+   secrets:
      token: ${{ secrets.TOKEN }}
+     
      
