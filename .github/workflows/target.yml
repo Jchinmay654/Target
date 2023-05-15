@@ -7,12 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Import Template Workflow
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use Template Workflow
         uses: Jchinmay654/Master/.github/workflows/template.yml@main
         with:
           message: "Custom message"
-      
-   
-
-
-
