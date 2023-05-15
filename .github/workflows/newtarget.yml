@@ -1,0 +1,16 @@
+name: check-this-code
+on: 
+  push:
+   branches: main
+  pull_request:
+   branches: main
+  workflow_dispatch:
+   
+jobs:    
+  Call-workflow:
+   uses: Jchinmay654/Master/.github/workflows/check.yml@main.yml
+   with:
+     username: Jchinmay654
+   secrets: 
+     token: ${{ secrets.TOKEN }}
+     
