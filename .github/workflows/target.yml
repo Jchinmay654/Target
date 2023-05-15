@@ -7,5 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Jchinmay/Master/.github/workflows/template.yml@main
+      - uses: Jchinmay654/Master/.github/workflows/template.yml@main
+        with:
+          message: "Custom msg"
 
