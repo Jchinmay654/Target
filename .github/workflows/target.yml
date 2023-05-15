@@ -4,11 +4,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  checkout:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Jchinmay654/Master/.github/workflows/template.yml@main
+      - name: Import Template Workflow
+        uses: Jchinmay654/Master/.github/workflows/template.yml@{branch-or-tag}
         with:
-          message: "Custom msg"
+          message: "Custom message"
+      
+   
+
 
 
