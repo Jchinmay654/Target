@@ -1,0 +1,10 @@
+name: Target Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Jchinmay/Master/.github/workflows/template.yml@main
