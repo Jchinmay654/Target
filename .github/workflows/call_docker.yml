@@ -1,0 +1,26 @@
+name: Deploy to Docker Hub
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Build and push image to Docker Hub
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_REPOSITORY: gamer9460/docker_nodejs_demo
+          IMAGE_TAG: nodejs_demo_image
+        run: |
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+          docker build -t $DOCKER_REPOSITORY:$IMAGE_TAG .
+          docker push $DOCKER_REPOSITORY:$IMAGE_TAG
+
